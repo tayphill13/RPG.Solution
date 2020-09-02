@@ -18,9 +18,9 @@ export const changeState = (prop) =>  {
   }
 }
 
-// const looseHealth("health");
+// const loseHealth("health");
 
-// looseHealth(int)(plant);
+// loseHealth(int)(plant);
 
 
 // const blueFlower = plantCreator(initialStats);
