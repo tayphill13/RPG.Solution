@@ -65,8 +65,9 @@ export const incrementDefense = changeState("defense")(1);
 
 
 export const handleCombatModule = (enemyAttackValue) => {
-      const damage = enemyAttackValue - defense;
-      return this.health -= damage;
+      const damage = enemyAttackValue - this.defense;
+      this.health -= damage;
+      return damage;
 }
 
 export const addCombatHandler = addFunction("handleCombat")(handleCombatModule);

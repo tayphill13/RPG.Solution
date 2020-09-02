@@ -1,7 +1,7 @@
 import * as RPG from '../src/RPG.js';
 
 describe('RPG', () => {
-  const initialStats = { hunger: 10, sun: 10, health: 10, defense: 5, leafCount: 1 }
+  const initialStats = { hunger: 10, sun: 10, health: 10, defense: 5, leafCount: 1 };
 
   test('should create a new plant character', () => {
     const myPlant = RPG.storeState(initialStats);
@@ -23,5 +23,14 @@ describe('RPG', () => {
     expect(myPlant(RPG.addCombatHandler).handleCombat).toBeTruthy()
   });
 
+  test('should show that combat reduces health', () => {
+    const myPlant = RPG.storeState(initialStats);
+    const combatPlant = myPlant(RPG.addCombatHandler);   
+    const damageDealt = myPlant().handleCombat(6);        
+    const updatedPlantHealth = myPlant().health
+    expect(updatedPlantHealth).toEqual(9);
+  });
+
+  //expect health to be equal to previous health - damage;
 
 });
