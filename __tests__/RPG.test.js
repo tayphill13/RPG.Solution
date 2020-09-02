@@ -11,8 +11,13 @@ describe('RPG', () => {
 
   test('should change plant health', () => {
     const myPlant = RPG.plantCreator(initialStats);
-    const loseHealth = RPG.changeState("health")(-5);
-    expect(myPlant(loseHealth)).toMatchObject({ hunger: 10, sun: 10, health: 5, defense: 5, leafCount: 1 });
+    expect(myPlant(RPG.decrementHealth)).toMatchObject({ hunger: 10, sun: 10, health: 9, defense: 5, leafCount: 1 });
   });
+
+  test('should change plant health', () => {
+    const myPlant = RPG.plantCreator(initialStats);
+    expect(myPlant(RPG.incrementHealth)).toMatchObject({ hunger: 10, sun: 10, health: 11, defense: 5, leafCount: 1 });
+  });
+
 
 });

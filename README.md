@@ -1,8 +1,8 @@
-# _{Application Name}_
+# _plant game_
 
 #### _{Brief description of application}, {Date of current version}_
 
-#### By _**{List of contributors}**_
+#### By _**Ian, JohnNils and Taylor**_
 
 ## Description
 
@@ -44,4 +44,4 @@ https://choosealicense.com/
 https://en.wikipedia.org/wiki/MIT_License
 https://en.wikipedia.org/wiki/GNU_General_Public_License
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2016 **_{Ian, JohnNils and Taylor}_**
