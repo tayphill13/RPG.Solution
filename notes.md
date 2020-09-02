@@ -19,6 +19,7 @@
 // Battle System
 // Enemies: Insects - flies, bees, preying mantis, catepillars, aphids. 
 // Chance upon killing an enemy to develop a mutation? like item drop
+// Battle Turn -> (player character attack value - npc character defense = total damage)
 
 // Level - up
 
