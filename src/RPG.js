@@ -1,6 +1,6 @@
 
 // Store State equivalent
-const plantCreator = (initialStats = {}) => {
+export const plantCreator = (initialStats = {}) => {
   let currentState = initialStats;
   return (stateChangeFunction = state => state) => {
     const newState = stateChangeFunction(currentState);
@@ -9,5 +9,19 @@ const plantCreator = (initialStats = {}) => {
   }
 }
 
-const blueFlower = plantCreator(initialStats);
-const newBlueFlowerState = blueFlower(stateChangingFunction);
+export const changeState = (prop) =>  {
+  return (value) => {
+    return (state) => ({
+      ...state,
+      [prop] : (state[prop] || 0) + value
+    });
+  }
+}
+
+// const looseHealth("health");
+
+// looseHealth(int)(plant);
+
+
+// const blueFlower = plantCreator(initialStats);
+// const newBlueFlowerState = blueFlower(stateChangingFunction);
