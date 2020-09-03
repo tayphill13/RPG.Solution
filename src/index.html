@@ -11,29 +11,32 @@
 </head>
 <body>
   <div class="container">
-    <div class="grow-buttons">
+    <div class="buttons">
       <button class="btn-success" id="water">Water</button>
       <button class="btn-success" id="move">Move Plant</button>
-      <button class="btn-success" id="fight">Fight Aphid</button>
+      <button class="btn-success" id="find">Find Aphid</button>
     </div>
 
     <h1>Your Plant's Values:</h1>
     <h3>
-      <div id="health-value">Health: 10</div>
-      <div id="leaf-count">Leaf-Count: 1</div>
-      <div id="hunger-level">Hunger: 0</div>
-      <div id="sun-level">Sunlight: 1</div>
+      <div id="health-value">Health: <span id="player-health"></span></div>
+      <div id="leaf-count">Leaf-Count: <span id="player-leaf"></span></div>
+      <div id="hunger-level">Hunger: <span id="player-hunger"></span></div>
+      <div id="sun-level">Sunlight: <span id="player-sun"></span></div>
     </h3><br>
-    <div id="hit-counter"><p><span id="damage-message"></span> <span id="damage-amount"></span> damage.</p></div>
     <div id="victory">
       <h3>You Defeated the Aphid</h3>
     </div>
     
     <div id="enemy-space">
-      <img src="https://snworksceo.imgix.net/jhn/14bd8cfc-fe65-424f-98fe-b2bcc536f845.sized-1000x1000.jpg?w=1000" alt="An image of an Aphid">
+      <img id="aphid" src="https://snworksceo.imgix.net/jhn/14bd8cfc-fe65-424f-98fe-b2bcc536f845.sized-1000x1000.jpg?w=1000" alt="An image of an Aphid">
       <h2>Aphid Stats:</h2>
-      <h4>Health: 5<span id="enemy-health"></span>
+      <h4>Health: <span id="enemy-health"></span>
+      <h6>Attack: <span id="enemy-attack"></span><br>Defense: <span id="enemy-defense"></span></h6>
+      <div id="player-hit-counter"><p>You did <span id="player-damage-amount"></span> damage.</p></div>
+      <div id="enemy-hit-counter"><p>Your enemy did <span id="enemy-damage-amount"></span> damage.</p></div>
       </h4>
+      <button class="btn-success" id="fight">Fight</button>
     </div>
   
   </div>

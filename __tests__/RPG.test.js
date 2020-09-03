@@ -20,7 +20,7 @@ describe('RPG', () => {
 
   test('should add handleCombatModule to plant character', () => {
     const myPlant = RPG.storeState(initialStats);
-    expect(myPlant(RPG.addCombatHandler).handleCombat).toBeTruthy()
+    expect(myPlant(RPG.addCombatHandler).handleCombat).toBeTruthy();
   });
 
   test('should show that combat returns damage amount', () => {

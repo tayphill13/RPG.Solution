@@ -6,8 +6,8 @@ export const storeState = (initialStats = {}) => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
     return newState;
-  }
-}
+  };
+};
 
 export const changeState = (prop) =>  {
   return (value) => {
@@ -15,8 +15,8 @@ export const changeState = (prop) =>  {
       ...state,
       [prop] : (state[prop] || 0) + value
     });
-  }
-}
+  };
+};
 
 // export const changeState = (prop) =>  {
 //   return (value) => {
@@ -37,12 +37,12 @@ const addFunction = (prop) => {
       ...state,
       [prop]: functionToAdd
     });
-  }
-}
+  };
+};
 
 // instantiate player
 const initialStats = { hunger: 10, sun: 10, health: 10, maxHealth: 10, attack: 5, defense: 5, leafCount: 1 };
-const playerPlant = storeState(initialStats)
+const playerPlant = storeState(initialStats);
 console.log(`Base display ${playerPlant()}`);
 
 // changeState function declarations
@@ -65,9 +65,9 @@ export const incrementDefense = changeState("defense")(1);
 
 
 export const handleCombatModule = function(enemyAttackValue) {
-      const damage = enemyAttackValue - this.defense;
-      return damage;
-}
+  const damage = enemyAttackValue - this.defense;
+  return damage;
+};
 
 export const addCombatHandler = addFunction("handleCombat")(handleCombatModule);
 
