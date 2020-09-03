@@ -23,12 +23,11 @@ describe('RPG', () => {
     expect(myPlant(RPG.addCombatHandler).handleCombat).toBeTruthy()
   });
 
-  test('should show that combat reduces health', () => {
+  test('should show that combat returns damage amount', () => {
     const myPlant = RPG.storeState(initialStats);
-    const combatPlant = myPlant(RPG.addCombatHandler);   
-    const damageDealt = myPlant().handleCombat(6);        
-    const updatedPlantHealth = myPlant().health
-    expect(updatedPlantHealth).toEqual(9);
+    const combatPlant = myPlant(RPG.addCombatHandler);       
+    const damage = combatPlant.handleCombat(6);  
+    expect(damage).toEqual(1);
   });
 
   //expect health to be equal to previous health - damage;

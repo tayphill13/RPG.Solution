@@ -64,13 +64,13 @@ export const decrementDefense = changeState("defense")(-1);
 export const incrementDefense = changeState("defense")(1);
 
 
-export const handleCombatModule = (enemyAttackValue) => {
+export const handleCombatModule = function(enemyAttackValue) {
       const damage = enemyAttackValue - this.defense;
-      this.health -= damage;
       return damage;
 }
 
 export const addCombatHandler = addFunction("handleCombat")(handleCombatModule);
+
 //const newPlant = myPlant(addCombatHandler);
 
 //const aphid = storeState({health: 5, attack: 2, defense: 3});
